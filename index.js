@@ -2,7 +2,7 @@
 const express = require('express');
 const db = require('./config/mongoose')
 // const port = 9000;
-const port = process.env.port || 9000
+const port = process.env.port || 8000
 
 const app = express();
 const cookieParser = require('cookie-parser');
@@ -13,19 +13,9 @@ const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 
 
-const sassMiddleware = require('node-sass-middleware')
-
 
 // store user authentication because when seever restart no need to login again
 const MongoStore = require('connect-mongo');
-
-app.use(sassMiddleware({
-    src:'./assets/scss',
-    dest:'./assets/css',
-    debug:true,
-    outputStyle:'expanded',
-    prefix:'/css'
-}))
 
 
 app.use(express.urlencoded())

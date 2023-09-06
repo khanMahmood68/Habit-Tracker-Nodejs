@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-// mongoose.connect('mongodb://127.0.0.1:27017/habit-tracker');
+// mongoose.connect('mongodb://127.0.0.1:27017/habit-tracker')
 
-const db_URI = 'mongodb+srv://mahmood68:F9J00qC5FYWQENgn@cluster0.r4xwbxw.mongodb.net/';
+const db_URI = 'mongodb+srv://mahmood68:wcwkUvgbLSu71VwI@cluster0.mhiwxx4.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(db_URI)
 
