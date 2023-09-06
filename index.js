@@ -1,7 +1,8 @@
 // Import express module
 const express = require('express');
 const db = require('./config/mongoose')
-const port = 9000;
+// const port = 9000;
+const port = process.env.port || 9000
 
 const app = express();
 const cookieParser = require('cookie-parser');
